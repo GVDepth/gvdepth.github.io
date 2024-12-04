@@ -178,11 +178,11 @@
             <div class="columns is-centered">
               <!-- Description for Image 1 -->
               <div class="column is-one-half-desktop has-text-centered">
-                <p class="is-size-5"><strong>Depth cues.</strong> Depth can be calculated both as a function of object's imaging size and vertical image position.</p>
+                <p class="is-size-3"><strong>Depth cues.</strong> Depth can be calculated both as a function of object's imaging size and vertical image position.</p>
               </div>
               <!-- Description for Image 2 -->
               <div class="column is-one-half-desktop has-text-centered">
-                <p class="is-size-5"><strong>Vertical Canonical Representation.</strong> We introduce a novel canonical representation, ensuring consistency of vertical image position cue for varying perspective geometries, facilitating learning and generalization.</p>
+                <p class="is-size-3"><strong>Vertical Canonical Representation.</strong> We introduce a novel canonical representation, ensuring consistency of vertical image position cue for varying perspective geometries, facilitating learning and generalization.</p>
               </div>
             </div>
           </div>
@@ -192,7 +192,31 @@
     </div>
   </div>
 </section>
-<!--End BibTex citation -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered">
+  <div class="column is-full_width">
+    <hr>
+    <h2 class="title is-3">Model architecture</h2>
+    <br>
+    <img src="static/images/model.jpg" class="center"; max_width: 100%/>
+    <div class="content has-text-justified">
+      <br>  
+      <p>
+        
+Our model predicts two canonical depth representations, each paired with a corresponding uncertainty estimate. 
+These representations are converted into depth maps using their respective canonical transforms, termed <em>Focal Canonical Transform</em> and <em>Vertical Canonical Transform</em>.. 
+By carefully designing these transforms and applying targeted data augmentation, the approach encourages two depth maps to leverage distinct cues: one emphasizing object size and the other focusing on vertical image position.
+The final depth map is then computed through probabilistic fusion.
+      </p>
+    </div>
+  </div>
+</div>
+<hr>
+</div>
+</section>
 
 
   <footer class="footer">
