@@ -47,13 +47,14 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">GVDepth: Zero-Shot Monocular Depth Estimation for Ground Vehicles based on Probabilistic Cue Fusion</h1>
+            <h1 class="title is-1 publication-title"><strong>GVDepth:</strong><br>
+              Zero-Shot Monocular Depth Estimation for Ground Vehicles based on Probabilistic Cue Fusion</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://koledickarlo.github.io/" target="_blank">Karlo Koledić</a>,</span>
               <span class="author-block">
-                <a href="#" target="_blank">Luka Petrović</a><sup>*</sup>,</span>
+                <a href="#" target="_blank">Luka Petrović</a>,</span>
               <span class="author-block">
                 <a href="#" target="_blank">Ivan Marković</a>,</span>
               <span class="author-block">
@@ -115,12 +116,15 @@
     <div class="columns">
       <div class="column is-one-half-desktop has-text-centered">
           <img src="static/images/comparison_kitti.png" alt="Comparison KITTI">
-          <p>Comparison KITTI</p>
       </div>
       <div class="column is-one-half-desktop has-text-centered">
           <img src="static/images/comparison_ddad.png" alt="Comparison DDAD">
-          <p>Comparison DDAD</p>
       </div>
+      <p><strong>Zero-shot evaluation on KITTI and DDAD.</strong> GVDepth demonstrates competitive zero-shot accuracy on autonomous driving datasets, matching state-of-the-art zero-shot Monocular Depth Estimation (MDE) methods. 
+        Remarkably, this is achieved while being trained on a <strong>single dataset</strong> collected with a <strong>single camera setup</strong>, even though its data distribution significantly differs from the KITTI and DDAD datasets.
+        UniDepth_RP and Metric3D_RP are not entirely true zero-shot methods, as they require resizing and padding to align with the training resolution.
+      </p>
+
   </div>
   </div>
 </section>
@@ -134,31 +138,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Generalizing metric monocular depth estimation presents a
-            significant challenge due to its ill-posed nature, while the
-            entanglement between camera parameters and depth am-
-            plifies issues further, hindering multi-dataset training and
-            zero-shot accuracy. This challenge is particularly evident
-            in autonomous vehicles and mobile robotics, where data
-            is collected with fixed camera setups, limiting the geomet-
-            ric diversity. Yet, this context also presents an opportunity:
-            the fixed relationship between the camera and the ground
-            plane imposes additional perspective geometry constraints,
-            enabling depth regression via vertical image positions of
-            objects. However, this cue is highly susceptible to overfit-
-            ting, thus we propose a novel canonical representation that
-            maintains consistency across varied camera setups, effec-
-            tively disentangling depth from specific parameters and en-
-            hancing generalization across datasets. We also propose
-            a novel architecture that adaptively and probabilistically
-            fuses depths estimated via object size and vertical image po-
-            sition cues. A comprehensive evaluation demonstrates the
-            effectiveness of the proposed approach on five autonomous
-            driving datasets, achieving accurate metric depth estima-
-            tion for varying resolutions, aspect ratios and camera se-
-            tups. Notably, we achieve comparable accuracy to existing
-            zero-shot methods, despite training on a single dataset with
-            a single-camera setup.
+            Generalizing metric monocular depth estimation presents a significant challenge due to its ill-posed nature, while the entanglement between camera parameters and depth amplifies issues further, hindering multi-dataset training and zero-shot accuracy.
+            This challenge is particularly evident in autonomous vehicles and mobile robotics, where data is collected with fixed camera setups, limiting the geometric diversity.
+            Yet, this context also presents an opportunity: the fixed relationship between the camera and the ground plane imposes additional perspective geometry constraints, enabling depth regression via vertical image positions of objects.
+            However, this cue is highly susceptible to overfitting, thus we propose a novel canonical representation that maintains consistency across varied camera setups, effectively disentangling depth from specific parameters and enhancing generalization across datasets.
+            We also propose a novel architecture that adaptively and probabilistically fuses depths estimated via object size and vertical image position cues.
+            A comprehensive evaluation demonstrates the effectiveness of the proposed approach on five autonomous driving datasets, achieving accurate metric depth estimation for varying resolutions, aspect ratios and camera setups.
+            Notably, we achieve comparable accuracy to existing zero-shot methods, despite training on a single dataset with a single-camera setup.
           </p>
         </div>
       </div>
