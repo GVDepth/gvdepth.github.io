@@ -243,11 +243,13 @@ The final depth map is then computed through probabilistic fusion.
   <br>
     <h3 align="left" class="title is-4">Why resolution adaptability matters</h3>
     <br>
-    <img src="static/images/resolution.png" class="center"; width: 100%/>
+    <img src="static/images/resolution.png" class="center"; width: 80%/>
     <div class="content has-text-justified">
       <br>  
-      <p>Metric3D and UniDepth are not truly zero-shot, as they overfit to aspect ratio and typically high resolution used during training. 
+      <p>Metric3D and UniDepth are not truly zero-shot, as they overfit to the aspect ratio and typically high image resolution used during training. 
         This necessitates image resizing and padding during evaluation, resulting in processing of <em>blank</em> pixels without adding any meaningful detail to the image.
+      </p>
+      <p>
         In contrast, GVDepth is <strong>fully resolution agnostic</strong>, adapting seamlessly to the native resolution of the input image.
         This feature is especially advantageous for real-time systems, where dynamically adjusting image resolution is one of 
         the simplest and most effective ways to control computational complexity.
