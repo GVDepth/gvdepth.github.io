@@ -160,7 +160,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full_width">
-        <hr>
+        <hr style="margin-top: 10px">
         <h2 class="title is-3">Methodology</h2>
         <section class="hero is-small">
           <div class="container hero-body">
@@ -197,7 +197,7 @@
   <div class="container is-max-desktop">
 <div class="columns is-centered has-text-centered">
   <div class="column is-full_width">
-    <hr>
+    <hr style="margin-top: 10px">
     <h2 class="title is-3">Model architecture</h2>
     <img src="static/images/model.png" class="center"; max_width: 100%/>
     <div class="content has-text-justified">
@@ -206,7 +206,7 @@
         
 Our model predicts two canonical depth representations, each paired with an uncertainty estimate. These are transformed into depth maps via the
 <em>Focal Canonical Transform</em> and <em>Vertical Canonical Transform</em>, which effectively <strong>disentangle camera parameters from depth</strong>, facilitating learning and generalization across arbitrary camera setups.
-By leveraging carefully designed transforms and targeted data augmentation, the approach encourages two depth maps to leverage distinct cues: one emphasizing object size and the other focusing on vertical image position.
+By leveraging carefully designed transforms and targeted data augmentation, the approach encourages two depth maps to leverage distinct cues: one emphasizing <strong>object size</strong> and the other focusing on object's <strong>vertical image position</strong>.
 The final depth map is then computed through probabilistic fusion.
       </p>
     </div>
@@ -219,12 +219,13 @@ The final depth map is then computed through probabilistic fusion.
   <div class="container is-max-desktop">
 <div class="columns is-centered has-text-centered">
   <div class="column is-full_width">
-    <hr>
+    <hr style="margin-top: 10px">
     <h2 class="title is-3">Results</h2>
     <br>
     <h3 align="left" class="title is-4">Qualitative ablation</h3>
     <br>
     <img src="static/images/ablation.png" class="center"; width: 100%/>
+    <br>
     <br>
     <h3 align="left" class="title is-4">Highlights</h3>
     <div class="content has-text-justified">
@@ -238,8 +239,10 @@ The final depth map is then computed through probabilistic fusion.
           object size cue on <strong>18 out of 25 train/test dataset combinations</strong></li>
         <li>The model with fusion of both cues outperforms the model with object size cue on <strong>24 out of 25 train/test dataset combinations</strong></li>
       </ul>
-
   </div>
+  <br>
+    <br>
+    <h3 align="left" class="title is-4">Why resolution adaptability matters</h3>
 </div>
 </div>
 </section>
