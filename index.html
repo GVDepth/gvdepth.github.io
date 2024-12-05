@@ -52,7 +52,7 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://koledickarlo.github.io/" target="_blank">Karlo Koledić</a>,</span>
+                <a href="#" target="_blank">Karlo Koledić</a>,</span>
               <span class="author-block">
                 <a href="#" target="_blank">Luka Petrović</a>,</span>
               <span class="author-block">
@@ -241,13 +241,29 @@ The final depth map is then computed through probabilistic fusion.
       </ul>
   </div>
   <br>
-    <br>
     <h3 align="left" class="title is-4">Why resolution adaptability matters</h3>
+    <br>
+    <img src="static/images/resolution.png" class="center"; width: 100%/>
+    <div class="content has-text-justified">
+      <br>  
+      <p>Metric3D and UniDepth are not truly zero-shot, as they overfit to aspect ratio and typically high resolution used during training. 
+        This necessitates image resizing and padding during evaluation, resulting in processing of <em>blank</em> pixels without adding any meaningful detail to the image.
+        In contrast, GVDepth is <strong>fully resolution agnostic</strong>, adapting seamlessly to the native resolution of the input image.
+        This feature is especially advantageous for real-time systems, where dynamically adjusting image resolution is one of 
+        the simplest and most effective ways to control computational complexity.
+      </p>
+    </div>
 </div>
 </div>
 </section>
 
-
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>, 
+}</code></pre>
+  </div>
+</section>
 
   <footer class="footer">
   <div class="container">
